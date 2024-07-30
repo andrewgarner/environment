@@ -1,6 +1,6 @@
-.PHONY: check clean develop format
+.PHONY: check clean develop format update
 
-default: develop
+default: update
 
 check:
 	@echo "Checking flake..."
@@ -17,3 +17,7 @@ develop:
 format:
 	@echo "Formatting..."
 	@nix fmt
+
+update:
+	@echo "Switching home-manager configuration..."
+	@home-manager switch --flake .#$(USER)
