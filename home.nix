@@ -16,10 +16,6 @@
     fish = {
       enable = true;
 
-      interactiveShellInit = ''
-        starship init fish | source
-      '';
-
       shellAbbrs = {
         d = "docker";
 
@@ -217,6 +213,16 @@
       signing = {
         key = "32CB397255B842EF";
         signByDefault = true;
+      };
+    };
+
+    starship = {
+      enable = true;
+      settings = {
+        nix_shell = {
+          disabled = false;
+          heuristic = true;
+        };
       };
     };
   };
