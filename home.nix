@@ -241,6 +241,10 @@
       enable = true;
     };
 
+    jq = {
+      enable = true;
+    };
+
     starship = {
       enable = true;
       settings = {
