@@ -237,6 +237,10 @@
       };
     };
 
+    gh = {
+      enable = true;
+    };
+
     starship = {
       enable = true;
       settings = {
