@@ -10,10 +10,10 @@
       nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed
       (system: function nixpkgs.legacyPackages.${system});
   in {
-    devShell = forAllSystems (pkgs:
-      pkgs.mkShell {
-        buildInputs = [pkgs.lefthook];
-      });
+    devShells = forAllSystems (pkgs: {
+      default =
+        pkgs.mkShell {packages = [pkgs.lefthook];};
+    });
 
     formatter = forAllSystems (pkgs: pkgs.alejandra);
 
