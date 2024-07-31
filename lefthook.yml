@@ -5,3 +5,4 @@ pre-commit:
     nix-fmt:
       glob: "*.nix"
       run: nix fmt {staged_files}
+      stage_fixed: true
