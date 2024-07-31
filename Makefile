@@ -20,4 +20,4 @@ format:
 
 update:
 	@echo "Switching home-manager configuration..."
-	@home-manager switch --flake .#$(USER)
+	@home-manager switch -b backup --flake .#$(USER)
