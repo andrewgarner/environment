@@ -1,6 +1,6 @@
 .PHONY: check clean develop format update
 
-default: update
+default: install
 
 check:
 	@echo "Checking flake..."
@@ -18,6 +18,10 @@ format:
 	@echo "Formatting..."
 	@nix fmt
 
+install:
+	@echo "Installing..."
+	@nix run .#homeConfigurations.andrewgarner.activationPackage
+
 update:
-	@echo "Switching home-manager configuration..."
-	@home-manager switch -b backup --flake .#$(USER)
+	@echo "Updating flake..."
+	@nix flake update

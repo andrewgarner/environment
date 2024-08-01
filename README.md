@@ -15,3 +15,11 @@ Open a new terminal session and verify the `nix` executable is in your `$PATH`:
 ```shell
 nix --version
 ```
+
+## Installation
+
+Run the following command to install the home configuration:
+
+```shell
+make install
+```
