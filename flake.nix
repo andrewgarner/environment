@@ -17,11 +17,9 @@
 
     formatter = forAllSystems (pkgs: pkgs.alejandra);
 
-    homeConfigurations = {
-      andrewgarner = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [./home.nix];
-      };
+    homeConfigurations.andrewgarner = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      modules = [./home.nix];
     };
   };
 }
