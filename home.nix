@@ -2,6 +2,12 @@
   home = {
     username = "andrewgarner";
     homeDirectory = "/Users/andrewgarner";
+
+    file.brewfile = {
+      target = "Brewfile";
+      source = ./Brewfile;
+    };
+
     stateVersion = "24.05";
   };
 
