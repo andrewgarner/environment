@@ -18,8 +18,8 @@ nix --version
 
 ## Installation
 
-Run the following command to install the home configuration:
+Run the following command to activate the home configuration:
 
 ```shell
-make install
+nix run github:andrewgarner/home#homeConfigurations.andrewgarner.activationPackage
 ```
