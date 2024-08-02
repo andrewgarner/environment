@@ -30,6 +30,8 @@ jobs:
 
       - name: Check Nix flake lockfile
         uses: DeterminateSystems/flake-checker-action@main
+        with:
+          fail-mode: true
 
       - name: Check Nix flake for errors
         run: nix flake check
