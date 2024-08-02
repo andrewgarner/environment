@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   home = {
     username = "andrewgarner";
     homeDirectory = "/Users/andrewgarner";
@@ -7,6 +7,10 @@
       target = "Brewfile";
       source = ./Brewfile;
     };
+
+    packages = with pkgs; [
+      fh
+    ];
 
     stateVersion = "24.05";
   };
