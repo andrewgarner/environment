@@ -9,7 +9,7 @@
 
     file.brewfile = {
       target = "Brewfile";
-      source = ./Brewfile;
+      source = ./homebrew/Brewfile;
     };
 
     packages = with pkgs; [
@@ -20,12 +20,12 @@
   };
 
   imports = [
-    ./aws.nix
-    ./direnv.nix
-    ./fish.nix
-    ./git.nix
-    ./jq.nix
-    ./starship.nix
+    ./aws
+    ./direnv
+    ./fish
+    ./git
+    ./jq
+    ./starship
   ];
 
   programs.home-manager.enable = true;
