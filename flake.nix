@@ -6,19 +6,18 @@
     home-manager,
     ...
   }: let
-    forAllSystems = function:
-      nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed
-      (system: function nixpkgs.legacyPackages.${system});
+    pkgs = nixpkgs.legacyPackages.aarch64-darwin;
   in {
-    devShells = forAllSystems (pkgs: {
-      default =
-        pkgs.mkShell {packages = [pkgs.lefthook];};
-    });
+    devShells.aarch64-darwin.default = pkgs.mkShell {
+      packages = with pkgs; [
+        lefthook
+      ];
+    };
 
-    formatter = forAllSystems (pkgs: pkgs.alejandra);
+    formatter.aarch64-darwin = pkgs.alejandra;
 
     homeConfigurations.andrewgarner = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      inherit pkgs;
       modules = [./home.nix];
     };
   };
