@@ -1,7 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  profile,
+  ...
+}: {
   home = {
-    username = "andrewgarner";
-    homeDirectory = "/Users/andrewgarner";
+    username = profile.username;
+    homeDirectory = "/Users/" + profile.username;
 
     file.brewfile = {
       target = "Brewfile";

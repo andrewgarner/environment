@@ -1,8 +1,8 @@
-{
+{profile, ...}: {
   programs.git = {
     enable = true;
-    userName = "Andrew Garner";
-    userEmail = "andrew@andrewgarner.com";
+    userName = profile.name;
+    userEmail = profile.email;
 
     attributes = [
       # Automatically normalise line endings for all text-based files

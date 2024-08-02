@@ -15,18 +15,30 @@
     home-manager,
     ...
   }: let
-    pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+    system = "aarch64-darwin";
+    pkgs = nixpkgs.legacyPackages.${system};
+
+    profile = {
+      name = "Andrew Garner";
+      email = "andrew@andrewgarner.com";
+      username = "andrewgarner";
+    };
   in {
-    devShells.aarch64-darwin.default = pkgs.mkShell {
+    devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
         lefthook
       ];
     };
 
-    formatter.aarch64-darwin = pkgs.alejandra;
+    formatter.${system} = pkgs.alejandra;
 
-    homeConfigurations.andrewgarner = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.${profile.username} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+
+      extraSpecialArgs = {
+        inherit profile;
+      };
+
       modules = [./home.nix];
     };
   };
