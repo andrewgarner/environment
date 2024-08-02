@@ -32,6 +32,7 @@ jobs:
         uses: DeterminateSystems/flake-checker-action@main
         with:
           fail-mode: true
+          send-statistics: false
 
       - name: Check Nix flake for errors
         run: nix flake check
