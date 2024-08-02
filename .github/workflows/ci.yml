@@ -11,6 +11,9 @@ jobs:
   flake-check:
     name: Flake check
     runs-on: macos-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,6 +24,9 @@ jobs:
           backtrace: full
           logger: pretty
           kvm: false
+
+      - name: Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
 
       - name: Check Nix flake for errors
         run: nix flake check
