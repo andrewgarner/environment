@@ -1,5 +1,7 @@
 .PHONY: check clean develop format update
 
+HOSTNAME := "andrewgarner"
+
 default: install
 
 check:
@@ -20,7 +22,8 @@ format:
 
 install:
 	@echo "Installing..."
-	@nix run .#homeConfigurations.andrewgarner.activationPackage
+	@nix build .#darwinConfigurations.${HOSTNAME}.system --extra-experimental-features 'nix-command flakes'
+	@./result/sw/bin/darwin-rebuild switch --flake .#${HOSTNAME}
 
 update:
 	@echo "Updating flake..."

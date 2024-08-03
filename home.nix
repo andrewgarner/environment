@@ -7,11 +7,6 @@
     username = profile.username;
     homeDirectory = "/Users/" + profile.username;
 
-    file.brewfile = {
-      target = "Brewfile";
-      source = ./homebrew/Brewfile;
-    };
-
     packages = with pkgs; [
       fh
     ];
