@@ -22,8 +22,7 @@ format:
 
 install:
 	@echo "Installing..."
-	@nix build .#darwinConfigurations.${HOSTNAME}.system --extra-experimental-features 'nix-command flakes'
-	@./result/sw/bin/darwin-rebuild switch --flake .#${HOSTNAME}
+	@nix run nix-darwin -- switch --flake .
 
 update:
 	@echo "Updating flake..."

@@ -18,8 +18,8 @@ nix --version
 
 ## Installation
 
-Run the following command to activate the home configuration:
+Run the following command to apply the configuration:
 
 ```shell
-nix run github:andrewgarner/home#homeConfigurations.andrewgarner.activationPackage
+nix run nix-darwin -- switch --flake github:andrewgarner/nix-config
 ```
