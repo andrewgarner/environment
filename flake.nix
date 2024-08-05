@@ -49,7 +49,7 @@
           home-manager.extraSpecialArgs = specialArgs;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.${profile.username} = import ./home.nix;
+          home-manager.users.${profile.username} = import ./home;
         }
       ];
     };

@@ -15,12 +15,12 @@
   };
 
   imports = [
-    ./aws
-    ./direnv
-    ./fish
-    ./git
-    ./jq
-    ./starship
+    ./aws.nix
+    ./direnv.nix
+    ./fish.nix
+    ./git.nix
+    ./jq.nix
+    ./starship.nix
   ];
 
   programs.home-manager.enable = true;
