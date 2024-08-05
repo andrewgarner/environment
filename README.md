@@ -1,6 +1,6 @@
 # Home
 
-My home configuration, powered by [Nix](https://nixos.org/).
+My [Nix](https://nixos.org/) configuration.
 
 ## Getting started
 
