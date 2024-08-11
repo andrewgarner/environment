@@ -14,6 +14,7 @@
     casks = [
       "arc"
       "chatgpt"
+      "cursor"
       "docker"
       "elgato-camera-hub"
       "elgato-control-center"
