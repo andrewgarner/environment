@@ -32,6 +32,10 @@
             };
           };
         };
+
+        NSGlobalDomain = {
+          AppleMenuBarVisibleInFullscreen = true;
+        };
       };
 
       dock = {
