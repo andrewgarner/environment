@@ -23,6 +23,17 @@
     '';
 
     defaults = {
+      CustomUserPreferences = {
+        "com.apple.symbolichotkeys" = {
+          AppleSymbolicHotKeys = {
+            "64" = {
+              # ⌘Space - Show Spotlight search
+              enabled = false;
+            };
+          };
+        };
+      };
+
       dock = {
         autohide = true;
         mineffect = "scale";
