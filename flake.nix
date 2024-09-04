@@ -25,33 +25,47 @@
     system = "aarch64-darwin";
     pkgs = nixpkgs.legacyPackages.${system};
 
-    profile = {
-      name = "Andrew Garner";
-      email = "andrew@andrewgarner.com";
-      hostname = "andrewgarner";
-      username = "andrewgarner";
-    };
+    darwinConfiguration = profile:
+      darwin.lib.darwinSystem {
+        inherit system;
 
-    specialArgs = {
-      inherit profile;
-    };
+        specialArgs = {
+          inherit profile;
+        };
+
+        modules = [
+          ./nix
+          ./system
+          ./homebrew
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              extraSpecialArgs = {
+                inherit profile;
+              };
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${profile.username} = import ./home;
+            };
+          }
+        ];
+      };
   in {
-    darwinConfigurations.${profile.hostname} = darwin.lib.darwinSystem {
-      inherit specialArgs system;
+    darwinConfigurations = {
+      andrewgarner = darwinConfiguration {
+        name = "Andrew Garner";
+        email = "andrew@andrewgarner.com";
+        hostname = "andrewgarner";
+        username = "andrewgarner";
+      };
 
-      modules = [
-        ./nix
-        ./system
-        ./homebrew
-
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.extraSpecialArgs = specialArgs;
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.${profile.username} = import ./home;
-        }
-      ];
+      andrewgarner-glabs = darwinConfiguration {
+        name = "Andrew Garner";
+        email = "andrew@gradient-labs.ai";
+        hostname = "andrewgarner-glabs";
+        username = "andrewgarner";
+      };
     };
 
     devShells.${system}.default = pkgs.mkShell {
