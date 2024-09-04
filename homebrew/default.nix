@@ -7,6 +7,11 @@
       cleanup = "zap";
     };
 
+    brews = [
+      "encore"
+      "graphite"
+    ];
+
     casks = [
       "arc"
       "chatgpt"
@@ -23,6 +28,11 @@
       "visual-studio-code"
       "warp"
       "zoom"
+    ];
+
+    taps = [
+      "encoredev/tap"
+      "withgraphite/tap"
     ];
   };
 }
