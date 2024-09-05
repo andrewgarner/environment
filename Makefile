@@ -1,6 +1,6 @@
 .PHONY: check clean develop format update
 
-HOSTNAME := "andrewgarner"
+PROFILE := "personal"
 
 default: install
 
@@ -22,7 +22,7 @@ format:
 
 install:
 	@echo "Installing..."
-	@nix run nix-darwin -- switch --flake .
+	@nix run nix-darwin -- switch --flake .#$(PROFILE)
 
 update:
 	@echo "Updating flake..."
