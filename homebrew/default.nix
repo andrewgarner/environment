@@ -7,8 +7,8 @@
     };
 
     brews = [
-      "encore"
-      "graphite"
+      "encoredev/tap/encore"
+      "withgraphite/tap/graphite"
     ];
 
     casks = [
