@@ -9,11 +9,6 @@
     ];
   };
 
-  networking = {
-    computerName = profile.hostname;
-    hostName = profile.hostname;
-  };
-
   programs.fish.enable = true;
   security.pam.enableSudoTouchIdAuth = true;
 
@@ -62,8 +57,6 @@
         AppleShowScrollBars = "WhenScrolling";
         "com.apple.trackpad.scaling" = 3.0;
       };
-
-      smb.NetBIOSName = profile.hostname;
     };
 
     keyboard = {

@@ -53,17 +53,15 @@
       };
   in {
     darwinConfigurations = {
-      andrewgarner = darwinConfiguration {
+      personal = darwinConfiguration {
         name = "Andrew Garner";
         email = "andrew@andrewgarner.com";
-        hostname = "andrewgarner";
         username = "andrewgarner";
       };
 
-      andrewgarner-glabs = darwinConfiguration {
+      gradientLabs = darwinConfiguration {
         name = "Andrew Garner";
         email = "andrew@gradient-labs.ai";
-        hostname = "andrewgarner-glabs";
         username = "andrewgarner";
       };
     };
