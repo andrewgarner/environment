@@ -32,6 +32,16 @@
       gst = "git status";
       gss = "git status --short";
 
+      gti = "gt init";
+      gtc = "gt create";
+      gts = "gt submit";
+      gtm = "gt modify";
+      gtr = "gt restack";
+      gtco = "gt checkout";
+      gtl = "gt log";
+      gtu = "gt up";
+      gtd = "gt down";
+
       n = "nix";
       nfmt = "nix fmt";
     };
