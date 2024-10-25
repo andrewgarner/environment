@@ -38,11 +38,8 @@
         mineffect = "scale";
         minimize-to-application = true;
         persistent-apps = [
-          "/Applications/Arc.app"
+          "/System/Cryptexes/App/System/Applications/Safari.app"
           "/System/Applications/Messages.app"
-          "/Applications/Obsidian.app"
-          "/Applications/Warp.app/"
-          "/Applications/WebStorm.app"
           "/System/Applications/System Settings.app"
         ];
         persistent-others = [
