@@ -12,7 +12,6 @@
     ];
 
     casks = [
-      "cursor"
       "docker"
       "elgato-camera-hub"
       "elgato-control-center"
