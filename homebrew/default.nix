@@ -12,7 +12,6 @@
     ];
 
     casks = [
-      "chatgpt"
       "cursor"
       "docker"
       "elgato-camera-hub"
