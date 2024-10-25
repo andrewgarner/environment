@@ -20,7 +20,6 @@
       "gpg-suite"
       "jetbrains-toolbox"
       "logitech-options"
-      "obsidian"
       "raycast"
       "visual-studio-code"
       "warp"
