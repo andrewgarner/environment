@@ -7,7 +7,6 @@
     };
 
     brews = [
-      "encoredev/tap/encore"
       "withgraphite/tap/graphite"
     ];
 
@@ -27,7 +26,6 @@
     ];
 
     taps = [
-      "encoredev/tap"
       "withgraphite/tap"
     ];
   };
