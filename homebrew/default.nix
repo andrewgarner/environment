@@ -6,10 +6,6 @@
       autoUpdate = false;
     };
 
-    brews = [
-      "withgraphite/tap/graphite"
-    ];
-
     casks = [
       "docker"
       "elgato-camera-hub"
@@ -23,10 +19,6 @@
       "visual-studio-code"
       "warp"
       "zoom"
-    ];
-
-    taps = [
-      "withgraphite/tap"
     ];
   };
 }
