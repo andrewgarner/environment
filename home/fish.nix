@@ -2,6 +2,10 @@
   programs.fish = {
     enable = true;
 
+    functions = {
+      gi = "curl -sL https://www.gitignore.io/api/$argv";
+    };
+
     shellAbbrs = {
       d = "docker";
       e = "encore";
