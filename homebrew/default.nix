@@ -12,7 +12,6 @@
     ];
 
     casks = [
-      "arc"
       "chatgpt"
       "cursor"
       "docker"
