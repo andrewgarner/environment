@@ -58,12 +58,6 @@
         email = "andrew@andrewgarner.com";
         username = "andrewgarner";
       };
-
-      gradientLabs = darwinConfiguration {
-        name = "Andrew Garner";
-        email = "andrew@gradient-labs.ai";
-        username = "andrewgarner";
-      };
     };
 
     devShells.${system}.default = pkgs.mkShell {
