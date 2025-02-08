@@ -18,7 +18,6 @@
       "logitech-options"
       "notion"
       "raycast"
-      "warp"
       "zoom"
     ];
   };
