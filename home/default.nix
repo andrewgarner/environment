@@ -22,6 +22,7 @@
     ./jq.nix
     ./neovim.nix
     ./starship.nix
+    ./tmux.nix
   ];
 
   programs.home-manager.enable = true;
