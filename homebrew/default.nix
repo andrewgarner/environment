@@ -17,7 +17,6 @@
       "logitech-options"
       "notion"
       "raycast"
-      "visual-studio-code"
       "warp"
       "zoom"
     ];
