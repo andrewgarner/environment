@@ -12,6 +12,7 @@
       "elgato-control-center"
       "font-jetbrains-mono-nerd-font"
       "fujitsu-scansnap-home"
+      "ghostty"
       "gpg-suite"
       "jetbrains-toolbox"
       "logitech-options"
