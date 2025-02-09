@@ -35,7 +35,7 @@
         };
 
         NSGlobalDomain = {
-          AppleMenuBarVisibleInFullscreen = true;
+          AppleMenuBarVisibleInFullscreen = false;
         };
       };
 
