@@ -2,6 +2,8 @@
   xdg.configFile."ghostty/config".text = ''
     theme = dark:tokyonight,light:tokyonight-day
 
+    keybind = global:alt+grave_accent=toggle_quick_terminal
+
     font-family = TX-02
     font-size = 15
 
