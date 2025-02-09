@@ -16,7 +16,6 @@
   };
 
   outputs = {
-    self,
     darwin,
     home-manager,
     nixpkgs,
