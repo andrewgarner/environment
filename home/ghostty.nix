@@ -15,6 +15,8 @@
     macos-auto-secure-input = true
     macos-secure-input-indication = true
 
+    mouse-hide-while-typing = true
+
     window-padding-x = 20
     window-padding-y = 20
     window-padding-balance = true
