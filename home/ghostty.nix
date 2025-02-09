@@ -6,5 +6,9 @@
     font-size = 15
 
     fullscreen
+
+    window-padding-x = 20
+    window-padding-y = 20
+    window-padding-balance = true
   '';
 }
