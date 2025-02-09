@@ -24,6 +24,7 @@
     ./neovim.nix
     ./starship.nix
     ./tmux.nix
+    ./zed.nix
   ];
 
   programs.home-manager.enable = true;

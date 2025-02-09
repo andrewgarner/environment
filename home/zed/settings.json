@@ -1,0 +1,58 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  // The extensions that Zed should automatically install on startup.
+  "auto_install_extensions": {
+    "html": true,
+    "tokyo-night": true
+  },
+
+  // Save when changing focus away from a specific buffer:
+  "autosave": "on_focus_change",
+
+  // The name of a base set of key bindings to use.
+  "base_keymap": "JetBrains",
+
+  // The name of a font to use for rendering text in the editor
+  "buffer_font_family": "TX-02",
+
+  // Different settings for specific languages.
+  "languages": {
+    "JSON": {
+      "prettier": {
+        "allowed": true,
+        "plugins": ["prettier-plugin-sort-json"]
+      }
+    },
+    "JSONC": {
+      "prettier": {
+        "allowed": true,
+        "plugins": ["prettier-plugin-sort-json"]
+      }
+    }
+  },
+
+  // Control what info is collected by Zed.
+  "telemetry": {
+    // Don't send debug info like crash reports.
+    "diagnostics": false,
+    // Don't send anonymised usage data like what languages you're using Zed with.
+    "metrics": false
+  },
+
+  // The name of the Zed theme to use for the UI.
+  "theme": {
+    "mode": "system",
+    "dark": "Tokyo Night",
+    "light": "Tokyo Night Light"
+  },
+
+  // The name of a font to use for rendering text in the UI
+  "ui_font_family": ".SystemUIFont"
+}

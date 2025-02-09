@@ -18,6 +18,7 @@
       "logitech-options"
       "notion"
       "raycast"
+      "zed"
       "zoom"
     ];
   };
