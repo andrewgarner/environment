@@ -8,6 +8,7 @@
     fullscreen
 
     background-blur = true
+    background-blur-radius = 20
     background-opacity = 0.95
     unfocused-split-opacity = 0.95
 
