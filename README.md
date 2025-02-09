@@ -21,5 +21,5 @@ nix --version
 Run the following command to apply the configuration:
 
 ```shell
-nix --experimental-features 'nix-command flakes' run nix-darwin -- switch --flake github:andrewgarner/nix-config
+nix --experimental-features 'nix-command flakes' run nix-darwin -- switch --flake github:andrewgarner/environment
 ```
