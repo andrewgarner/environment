@@ -7,6 +7,12 @@
     shells = with pkgs; [
       fish
     ];
+
+    systemPackages = with pkgs; [
+      nil # Yet another language server for Nix
+      nixd # Nix language server
+      nixpkgs-fmt # Nix code formatter for nixpkgs
+    ];
   };
 
   programs.fish.enable = true;
