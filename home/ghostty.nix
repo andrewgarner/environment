@@ -7,6 +7,10 @@
 
     fullscreen
 
+    background-blur = true
+    background-opacity = 0.95
+    unfocused-split-opacity = 0.95
+
     window-padding-x = 20
     window-padding-y = 20
     window-padding-balance = true
