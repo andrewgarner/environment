@@ -12,6 +12,9 @@
     background-opacity = 0.95
     unfocused-split-opacity = 0.95
 
+    macos-auto-secure-input = true
+    macos-secure-input-indication = true
+
     window-padding-x = 20
     window-padding-y = 20
     window-padding-balance = true
