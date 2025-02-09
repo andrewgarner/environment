@@ -51,6 +51,8 @@
     };
 
     shellInit = ''
+      set --universal fish_greeting
+
       set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
       set -gx HOMEBREW_NO_ANALYTICS "1";
       set -gx HOMEBREW_NO_ENV_HINTS "1";
