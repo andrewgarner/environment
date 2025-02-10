@@ -65,6 +65,13 @@
     "metrics": false
   },
 
+  // Settings specific to the terminal
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  },
+
   // The name of the Zed theme to use for the UI.
   "theme": {
     "mode": "system",
