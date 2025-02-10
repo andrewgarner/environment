@@ -2,20 +2,21 @@
   description = "My development environment";
 
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
+
     darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      url = "github:LnL7/nix-darwin/nix-darwin-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {
-      url = "https://flakehub.com/f/nix-community/home-manager/0.2405.3571.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      url = "github:nix-community/home-manager/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
   };
 
   outputs = {
+    self,
     darwin,
     home-manager,
     nixpkgs,
@@ -30,6 +31,7 @@
 
         specialArgs = {
           inherit profile;
+          configurationRevision = self.rev or self.dirtyRev or null;
         };
 
         modules = [

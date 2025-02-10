@@ -6,7 +6,7 @@
   programs.home-manager.enable = true;
 
   home = {
-    stateVersion = "24.05";
+    stateVersion = "24.11";
 
     homeDirectory = "/Users/" + profile.username;
     username = profile.username;

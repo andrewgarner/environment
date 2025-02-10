@@ -1,6 +1,7 @@
 {
   pkgs,
   profile,
+  specialArgs,
   ...
 }: {
   environment = {
@@ -17,6 +18,9 @@
 
   programs.fish.enable = true;
   security.pam.enableSudoTouchIdAuth = true;
+
+  system.configurationRevision = specialArgs.configurationRevision;
+  system.stateVersion = 5;
 
   system = {
     activationScripts.postUserActivation.text = ''
