@@ -3,15 +3,17 @@
   profile,
   ...
 }: {
+  programs.home-manager.enable = true;
+
   home = {
-    username = profile.username;
+    stateVersion = "24.05";
+
     homeDirectory = "/Users/" + profile.username;
+    username = profile.username;
 
     packages = with pkgs; [
-      fh
+      fh # FlakeHub
     ];
-
-    stateVersion = "24.05";
   };
 
   imports = [
@@ -26,6 +28,4 @@
     (import ./tmux)
     (import ./zed)
   ];
-
-  programs.home-manager.enable = true;
 }
