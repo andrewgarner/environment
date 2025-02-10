@@ -15,7 +15,7 @@
   };
 
   imports = [
-    ./aws.nix
+    ./aws
     ./direnv.nix
     ./fish.nix
     ./ghostty.nix
