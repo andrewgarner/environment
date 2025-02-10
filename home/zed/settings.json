@@ -32,6 +32,12 @@
   // The name of a font to use for rendering text in the editor
   "buffer_font_family": "TX-02",
 
+  // Settings related to calls in Zed
+  "calls": {
+    // Join calls with the microphone muted
+    "mute_on_join": true
+  },
+
   // Different settings for specific languages.
   "languages": {
     "JSON": {
