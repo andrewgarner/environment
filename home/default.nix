@@ -19,7 +19,7 @@
     ./direnv
     ./fish
     ./ghostty
-    ./git.nix
+    ./git
     ./jq.nix
     ./neovim.nix
     ./starship.nix
