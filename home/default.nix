@@ -22,7 +22,7 @@
     ./git
     ./jq
     ./neovim
-    ./starship.nix
+    ./starship
     ./tmux.nix
     ./zed.nix
   ];
