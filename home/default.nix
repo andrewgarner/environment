@@ -21,7 +21,7 @@
     ./ghostty
     ./git
     ./jq
-    ./neovim.nix
+    ./neovim
     ./starship.nix
     ./tmux.nix
     ./zed.nix
