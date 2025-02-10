@@ -16,7 +16,7 @@
 
   imports = [
     ./aws
-    ./direnv.nix
+    ./direnv
     ./fish.nix
     ./ghostty.nix
     ./git.nix
