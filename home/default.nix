@@ -18,7 +18,7 @@
     ./aws
     ./direnv
     ./fish
-    ./ghostty.nix
+    ./ghostty
     ./git.nix
     ./jq.nix
     ./neovim.nix
