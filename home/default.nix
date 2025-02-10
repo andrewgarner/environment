@@ -24,7 +24,7 @@
     ./neovim
     ./starship
     ./tmux
-    ./zed.nix
+    ./zed
   ];
 
   programs.home-manager.enable = true;
