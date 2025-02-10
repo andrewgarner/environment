@@ -1,5 +1,5 @@
 {
-  description = "My home configuration";
+  description = "My development environment";
 
   inputs = {
     darwin = {

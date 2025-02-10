@@ -1,6 +1,6 @@
-# Home
+# Environment
 
-My [Nix](https://nixos.org/) configuration.
+My development environment, powered by [Nix](https://nixos.org/).
 
 ## Getting started
 
