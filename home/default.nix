@@ -15,16 +15,16 @@
   };
 
   imports = [
-    ./aws
-    ./direnv
-    ./fish
-    ./ghostty
-    ./git
-    ./jq
-    ./neovim
-    ./starship
-    ./tmux
-    ./zed
+    (import ./aws)
+    (import ./direnv)
+    (import ./fish)
+    (import ./ghostty)
+    (import ./git)
+    (import ./jq)
+    (import ./neovim)
+    (import ./starship)
+    (import ./tmux)
+    (import ./zed)
   ];
 
   programs.home-manager.enable = true;
