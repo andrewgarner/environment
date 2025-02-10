@@ -20,7 +20,7 @@
     ./fish
     ./ghostty
     ./git
-    ./jq.nix
+    ./jq
     ./neovim.nix
     ./starship.nix
     ./tmux.nix
