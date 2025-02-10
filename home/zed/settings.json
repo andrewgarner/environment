@@ -54,6 +54,9 @@
     }
   },
 
+  // Whether the line numbers on editors gutter are relative or not.
+  "relative_line_numbers": true,
+
   // Settings related to the editor's tab bar.
   "tab_bar": {
     // Do not to show the tab bar in the editor
