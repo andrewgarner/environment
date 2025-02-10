@@ -23,7 +23,7 @@
     ./jq
     ./neovim
     ./starship
-    ./tmux.nix
+    ./tmux
     ./zed.nix
   ];
 
