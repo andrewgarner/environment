@@ -6,7 +6,3 @@ pre-commit:
       glob: "*.nix"
       run: nix fmt {staged_files}
       stage_fixed: true
-    stylua:
-      glob: "*.lua"
-      run: nix fmt {staged_files}
-      stage_fixed: true
