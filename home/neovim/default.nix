@@ -3,11 +3,6 @@
     enable = true;
 
     defaultEditor = true;
-    extraLuaConfig = builtins.readFile ./init.lua;
-
-    plugins = with pkgs.vimPlugins; [
-      lazy-nvim
-    ];
 
     viAlias = true;
     vimAlias = true;
@@ -19,8 +14,8 @@
     ripgrep # Used by Telescope
   ];
 
-  xdg.configFile."nvim/lua" = {
+  xdg.configFile."nvim" = {
     recursive = true;
-    source = ./lua;
+    source = ./config;
   };
 }

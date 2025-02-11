@@ -22,7 +22,7 @@ format:
 
 install:
 	@echo "Installing..."
-	@nix run nix-darwin -- switch --flake .#$(PROFILE)
+	@nix run nix-darwin -- switch --flake ".?submodules=1#$(PROFILE)"
 
 update:
 	@echo "Updating flake..."
