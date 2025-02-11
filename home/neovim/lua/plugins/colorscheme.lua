@@ -6,7 +6,7 @@ return {
     transparent = true,
   },
   init = function()
-    vim.cmd.colorscheme "tokyonight"
-    vim.cmd.hi "Comment gui=none"
+    vim.cmd.colorscheme("tokyonight")
+    vim.cmd.hi("Comment gui=none")
   end,
 }
