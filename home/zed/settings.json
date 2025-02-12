@@ -80,5 +80,8 @@
   },
 
   // The name of a font to use for rendering text in the UI
-  "ui_font_family": ".SystemUIFont"
+  "ui_font_family": ".SystemUIFont",
+
+  // Enable vim mode
+  "vim_mode": true
 }
