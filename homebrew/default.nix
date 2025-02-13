@@ -7,6 +7,7 @@
     };
 
     casks = [
+      "aerospace"
       "docker"
       "elgato-camera-hub"
       "elgato-control-center"
@@ -16,6 +17,7 @@
       "gpg-suite"
       "jetbrains-toolbox"
       "logitech-options"
+      "nikitabobko/tap/aerospace"
       "notion"
       "raycast"
       "zed"

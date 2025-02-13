@@ -5,8 +5,6 @@ keybind = global:alt+grave_accent=toggle_quick_terminal
 font-family = TX-02
 font-size = 15
 
-fullscreen
-
 background-blur = true
 background-blur-radius = 20
 background-opacity = 0.95

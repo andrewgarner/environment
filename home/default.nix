@@ -17,6 +17,7 @@
   };
 
   imports = [
+    (import ./aerospace)
     (import ./aws)
     (import ./direnv)
     (import ./fish)

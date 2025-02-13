@@ -41,6 +41,10 @@
         NSGlobalDomain = {
           AppleMenuBarVisibleInFullscreen = false;
         };
+
+        NSWindow = {
+          ShouldDragOnGesture = true;
+        };
       };
 
       dock = {
