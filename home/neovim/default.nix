@@ -3,16 +3,17 @@
     enable = true;
 
     defaultEditor = true;
-
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
   };
 
   home.packages = with pkgs; [
     fd # Used by Telescope
     ripgrep # Used by Telescope
   ];
+
+  home.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
 
   xdg.configFile."nvim" = {
     recursive = true;
