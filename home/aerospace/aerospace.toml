@@ -116,9 +116,9 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
+alt-a= 'workspace Audio'
 alt-b = 'workspace Browser'
 alt-c = 'workspace Code'
-alt-m = 'workspace Music'
 alt-n = 'workspace Notes'
 alt-t = 'workspace Terminal'
 
@@ -128,9 +128,9 @@ alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-a = 'move-node-to-workspace Audio'
 alt-shift-b = 'move-node-to-workspace Browser'
 alt-shift-c = 'move-node-to-workspace Code'
-alt-shift-m = 'move-node-to-workspace Music'
 alt-shift-n = 'move-node-to-workspace Notes'
 alt-shift-t = 'move-node-to-workspace Terminal'
 
@@ -162,6 +162,10 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = 'move-node-to-workspace Audio'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace Browser'
 
@@ -172,10 +176,6 @@ run = 'move-node-to-workspace Code'
 [[on-window-detected]]
 if.app-id = 'com.zed.Zed'
 run = 'move-node-to-workspace Code'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Music'
-run = 'move-node-to-workspace Music'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
