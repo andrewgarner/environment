@@ -14,6 +14,10 @@
     packages = with pkgs; [
       fh # FlakeHub
     ];
+
+    sessionVariables = {
+      PAGER = "less -FirSwX";
+    };
   };
 
   imports = [
