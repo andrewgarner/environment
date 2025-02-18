@@ -8,7 +8,6 @@
 
     shellAbbrs = {
       d = "docker";
-      e = "encore";
 
       g = "git";
       ga = "git add --patch";
