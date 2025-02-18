@@ -64,7 +64,15 @@
       ! set -q MANPATH; and set MANPATH ""; set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
       ! set -q INFOPATH; and set INFOPATH ""; set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
 
-      source "$GHOSTTY_RESOURCES_DIR"/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+      # Nix
+      if test -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish"
+        source "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish"
+      end
+
+      # Ghostty
+      if test -e "$GHOSTTY_RESOURCES_DIR"/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+        source "$GHOSTTY_RESOURCES_DIR"/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+      end
     '';
   };
 }
