@@ -38,6 +38,10 @@
           };
         };
 
+        NSAutomatic = {
+          WindowAnimationsEnabled = false;
+        };
+
         NSGlobalDomain = {
           AppleMenuBarVisibleInFullscreen = false;
         };
