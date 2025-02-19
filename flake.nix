@@ -35,7 +35,6 @@
         };
 
         modules = [
-          ./nix
           ./system
           ./homebrew
 

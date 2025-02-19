@@ -4,6 +4,8 @@
   specialArgs,
   ...
 }: {
+  nix.enable = false;
+
   users.users.${profile.username} = {
     home = "/Users/${profile.username}";
     description = profile.name;
