@@ -13,6 +13,9 @@
 
     packages = with pkgs; [
       fh # FlakeHub
+      nil # Yet another language server for Nix
+      nixd # Nix language server
+      nixpkgs-fmt # Nix code formatter for nixpkgs
     ];
 
     sessionVariables = {
