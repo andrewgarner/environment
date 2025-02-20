@@ -45,6 +45,26 @@
       gtu = "gt up";
       gtd = "gt down";
 
+      m = "mise";
+      ma = "mise alias";
+      mb = "mise backends";
+      mcfg = "mise config";
+      mdr = "mise doctor";
+      me = "mise env";
+      mfmt = "mise fmt";
+      mi = "mise install";
+      mln = "mise link";
+      mls = "mise list";
+      mps = "mise plugins";
+      mr = "mise run";
+      mrm = "mise unuse";
+      msh = "mise shell";
+      mt = "mise tasks";
+      mu = "mise use";
+      mup = "mise upgrade";
+      mw = "mise watch";
+      mx = "mise exec --";
+
       n = "nix";
       nfmt = "nix fmt";
     };

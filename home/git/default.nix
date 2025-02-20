@@ -143,6 +143,10 @@
       "*.icloud"
 
       # End of https://www.toptal.com/developers/gitignore/api/macos
+
+      ### Mise ###
+      "mise.local.toml"
+      "mise.*.local.toml"
     ];
 
     signing = {

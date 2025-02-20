@@ -37,6 +37,7 @@
     (import ./ghostty)
     (import ./git)
     (import ./jq)
+    (import ./mise)
     (import ./neovim)
     (import ./starship)
     (import ./tmux)
