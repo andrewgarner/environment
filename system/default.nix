@@ -59,6 +59,10 @@
     show-recents = false;
   };
 
+  system.defaults.finder = {
+    _FXSortFoldersFirst = true;
+  };
+
   system.defaults.NSGlobalDomain = {
     AppleInterfaceStyle = "Dark";
     AppleShowScrollBars = "WhenScrolling";
