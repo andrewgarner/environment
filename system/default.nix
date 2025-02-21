@@ -63,6 +63,10 @@
     _FXSortFoldersFirst = true;
   };
 
+  system.defaults.menuExtraClock = {
+    FlashDateSeparators = true;
+  };
+
   system.defaults.NSGlobalDomain = {
     AppleInterfaceStyle = "Dark";
     AppleShowScrollBars = "WhenScrolling";
