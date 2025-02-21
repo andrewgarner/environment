@@ -56,7 +56,7 @@
       "/Users/${profile.username}/Downloads"
     ];
     show-process-indicators = false;
-    show-recents = true;
+    show-recents = false;
   };
 
   system.defaults.NSGlobalDomain = {
