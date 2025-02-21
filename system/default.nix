@@ -44,6 +44,7 @@
 
   system.defaults.dock = {
     autohide = true;
+    expose-group-apps = true;
     mineffect = "scale";
     minimize-to-application = true;
     persistent-apps = [
