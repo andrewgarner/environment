@@ -186,7 +186,7 @@ if.app-id = 'com.jetbrains.WebStorm'
 run = 'move-node-to-workspace Code'
 
 [[on-window-detected]]
-if.app-id = 'com.zed.Zed'
+if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace Code'
 
 [[on-window-detected]]
