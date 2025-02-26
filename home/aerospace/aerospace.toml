@@ -214,6 +214,10 @@ if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace Other'
 
 [[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace Other'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.reminders'
 run = 'move-node-to-workspace Other'
 
