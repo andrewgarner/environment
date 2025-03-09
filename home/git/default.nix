@@ -47,12 +47,12 @@
 
       diff = {
         algorithm = "histogram";
-        tool = "vscode";
+        tool = "zed";
       };
 
       difftool = {
-        vscode = {
-          cmd = "code --wait --diff $LOCAL $REMOTE";
+        zed = {
+          cmd = "zed --diff $LOCAL $REMOTE";
           prompt = false;
         };
       };
@@ -66,7 +66,7 @@
       init.defaultBranch = "main";
 
       merge = {
-        tool = "vscode";
+        tool = "zed";
 
         npm-merge-driver = {
           name = "Automatically merge Node Package Manager lockfiles";
@@ -85,8 +85,9 @@
       };
 
       mergetool = {
-        vscode = {
-          cmd = "code --wait --diff $LOCAL $REMOTE";
+        keepBackup = false;
+        zed = {
+          cmd = "zed --merge $BASE $LOCAL $REMOTE $MERGED";
         };
       };
 
