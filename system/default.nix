@@ -13,7 +13,7 @@
 
   environment.shells = [pkgs.fish];
   programs.fish.enable = true;
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   system.configurationRevision = specialArgs.configurationRevision;
   system.stateVersion = 5;
