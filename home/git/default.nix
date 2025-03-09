@@ -93,6 +93,7 @@
       };
 
       push = {
+        autosetupremote = true;
         default = "current";
       };
 
