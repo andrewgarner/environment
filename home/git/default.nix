@@ -37,8 +37,10 @@
       };
 
       core = {
+        fsmonitor = true;
         pager = "less -FRSX";
         whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
+        untrackedcache = true;
       };
 
       credential.helper = "osxkeychain";
