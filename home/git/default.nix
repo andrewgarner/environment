@@ -45,7 +45,10 @@
 
       credential.helper = "osxkeychain";
 
-      diff.tool = "vscode";
+      diff = {
+        algorithm = "histogram";
+        tool = "vscode";
+      };
 
       difftool = {
         vscode = {
