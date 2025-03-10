@@ -4,72 +4,95 @@
   specialArgs,
   ...
 }: {
+  # Disable Nix package manager
   nix.enable = false;
 
+  # Set system state version
+  system.stateVersion = 5;
+
+  # Set system configuration revision
+  system.configurationRevision = specialArgs.configurationRevision;
+
+  # Run settings activation script after user activation
+  system.activationScripts.postUserActivation.text = ''
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+  '';
+
+  # Set user configuration (home directory and full name)
   users.users.${profile.username} = {
     home = "/Users/${profile.username}";
     description = profile.name;
   };
 
+  # Add Fish shell to available shells
   environment.shells = [pkgs.fish];
+
+  # Enable Fish as the default shell
   programs.fish.enable = true;
+
+  # Enable Touch ID for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  system.configurationRevision = specialArgs.configurationRevision;
-  system.stateVersion = 5;
+  # Enable keyboard mapping
+  system.keyboard.enableKeyMapping = true;
 
-  system.keyboard = {
-    enableKeyMapping = true;
-    remapCapsLockToControl = true;
-  };
+  # Remap Caps Lock to Control key
+  system.keyboard.remapCapsLockToControl = true;
 
-  system.activationScripts.postUserActivation.text = ''
-    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-  '';
+  # Set trackpad sensitivity/speed to 3.0
+  system.defaults.NSGlobalDomain."com.apple.trackpad.scaling" = 3.0;
 
-  system.defaults.CustomUserPreferences = {
-    "com.apple.symbolichotkeys" = {
-      AppleSymbolicHotKeys = {
-        "64" = {
-          # ⌘Space - Show Spotlight search
-          enabled = false;
-        };
-      };
-    };
+  # Set dark mode interface
+  system.defaults.NSGlobalDomain.AppleInterfaceStyle = "Dark";
 
-    NSAutomatic.WindowAnimationsEnabled = false;
-    NSGlobalDomain.AppleMenuBarVisibleInFullscreen = false;
-    NSWindow.ShouldDragOnGesture = true;
-  };
+  # Show scrollbars only when scrolling
+  system.defaults.NSGlobalDomain.AppleShowScrollBars = "WhenScrolling";
 
-  system.defaults.dock = {
-    autohide = true;
-    expose-group-apps = true;
-    mineffect = "scale";
-    minimize-to-application = true;
-    persistent-apps = [
-      "/System/Cryptexes/App/System/Applications/Safari.app"
-      "/System/Applications/Messages.app"
-      "/System/Applications/System Settings.app"
-    ];
-    persistent-others = [
-      "/Users/${profile.username}/Downloads"
-    ];
-    show-process-indicators = false;
-    show-recents = false;
-  };
+  # Disable window animations
+  system.defaults.NSGlobalDomain.NSAutomaticWindowAnimationsEnabled = false;
 
-  system.defaults.finder = {
-    _FXSortFoldersFirst = true;
-  };
+  # Hide menu bar in fullscreen mode
+  system.defaults.CustomUserPreferences.NSGlobalDomain.AppleMenuBarVisibleInFullscreen = false;
 
-  system.defaults.menuExtraClock = {
-    FlashDateSeparators = true;
-  };
+  # Enable window dragging with gestures
+  system.defaults.NSGlobalDomain.NSWindowShouldDragOnGesture = true;
 
-  system.defaults.NSGlobalDomain = {
-    AppleInterfaceStyle = "Dark";
-    AppleShowScrollBars = "WhenScrolling";
-    "com.apple.trackpad.scaling" = 3.0;
-  };
+  # Flash date separators in menu bar clock
+  system.defaults.menuExtraClock.FlashDateSeparators = true;
+
+  # Disable ⌘Space for Spotlight search
+  system.defaults.CustomUserPreferences."com.apple.symbolichotkeys".AppleSymbolicHotKeys."64".enabled = false;
+
+  # Auto-hide the dock
+  system.defaults.dock.autohide = true;
+
+  # Group app windows together in Mission Control
+  system.defaults.dock.expose-group-apps = true;
+
+  # Use scale effect for minimizing windows
+  system.defaults.dock.mineffect = "scale";
+
+  # Minimize windows to their application icon
+  system.defaults.dock.minimize-to-application = true;
+
+  # Hide app indicators in dock
+  system.defaults.dock.show-process-indicators = false;
+
+  # Hide recent applications in dock
+  system.defaults.dock.show-recents = false;
+
+  # Set persistent apps in dock
+  system.defaults.dock.persistent-apps = [
+    "/System/Cryptexes/App/System/Applications/Safari.app"
+    "/System/Applications/Messages.app"
+    "/System/Applications/System Settings.app"
+  ];
+
+  # Set persistent folders in dock
+  system.defaults.dock.persistent-others = [
+    "/Users/${profile.username}/Downloads"
+  ];
+
+  # Sort folders first in Finder
+  system.defaults.finder._FXSortFoldersFirst = true;
 }
