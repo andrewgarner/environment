@@ -165,4 +165,36 @@
   programs.gh = {
     enable = true;
   };
+
+  programs.fish.functions = {
+    gi = "curl -sL https://www.gitignore.io/api/$argv";
+  };
+
+  programs.fish.shellAbbrs = {
+    g = "git";
+    ga = "git add --patch";
+    gb = "git branch";
+    gc = "git commit --verbose";
+    gca = "git commit --verbose --amend";
+    gcb = "git checkout -b";
+    gcl = "git clone --recurse-submodules";
+    gcm = "git commit --message";
+    gco = "git checkout";
+    gcp = "git cherry-pick";
+    gd = "git diff";
+    gf = "git fetch";
+    glol = "git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'";
+    gm = "git merge";
+    gp = "git push";
+    gpf = "git push --force-with-lease";
+    gpr = "git pull --rebase";
+    grb = "git rebase";
+    grba = "git rebase --abort";
+    grbc = "git rebase --continue";
+    grbi = "git rebase --interactive";
+    grbs = "git rebase --skip";
+    grm = "git rm";
+    gst = "git status";
+    gss = "git status --short";
+  };
 }
