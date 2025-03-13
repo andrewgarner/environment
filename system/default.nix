@@ -4,7 +4,7 @@
   specialArgs,
   ...
 }: {
-  # Disable Nix package manager
+  # Disable Nix as we're using Determinate (https://determinate.systems/posts/nix-darwin-updates/
   nix.enable = false;
 
   # Set system state version
