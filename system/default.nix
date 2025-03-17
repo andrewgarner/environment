@@ -81,12 +81,8 @@
   # Hide recent applications in dock
   system.defaults.dock.show-recents = false;
 
-  # Set persistent apps in dock
-  system.defaults.dock.persistent-apps = [
-    "/System/Cryptexes/App/System/Applications/Safari.app"
-    "/System/Applications/Messages.app"
-    "/System/Applications/System Settings.app"
-  ];
+  # Show only open applications in the Dock
+  system.defaults.dock.static-only = true;
 
   # Set persistent folders in dock
   system.defaults.dock.persistent-others = [
