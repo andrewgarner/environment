@@ -41,6 +41,7 @@
     (import ./neovim)
     (import ./starship)
     (import ./tmux)
+    (import ./vscode)
     (import ./zed)
   ];
 }
