@@ -19,6 +19,7 @@
       "logitech-options"
       "nikitabobko/tap/aerospace"
       "notion"
+      "notion-calendar"
       "raycast"
       "zed"
       "zoom"
