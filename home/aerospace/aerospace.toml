@@ -221,6 +221,10 @@ if.app-id = 'notion.mail.id'
 run = 'move-node-to-workspace Workspace'
 
 [[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace Workspace'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.reminders'
 run = 'move-node-to-workspace Other'
 
