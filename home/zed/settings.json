@@ -88,5 +88,5 @@
   "ui_font_family": ".SystemUIFont",
 
   // Enable vim mode
-  "vim_mode": true
+  "vim_mode": false
 }
