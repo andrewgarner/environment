@@ -7,7 +7,7 @@ My development environment, powered by [Nix](https://nixos.org/).
 Install Nix by running the following command:
 
 ```shell
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --determinate
 ```
 
 Open a new terminal session and verify the `nix` executable is in your `$PATH`:
