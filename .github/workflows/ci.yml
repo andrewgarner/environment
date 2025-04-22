@@ -26,7 +26,7 @@ jobs:
           kvm: false
 
       - name: Nix Cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
+        uses: DeterminateSystems/flakehub-cache-action@main
 
       - name: Check Nix flake lockfile
         uses: DeterminateSystems/flake-checker-action@main
