@@ -20,6 +20,7 @@
       "nikitabobko/tap/aerospace"
       "notion"
       "notion-calendar"
+      "notion-mail"
       "raycast"
       "zed"
       "zoom"
