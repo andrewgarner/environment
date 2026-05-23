@@ -5,13 +5,7 @@
   ...
 }:
 {
-  determinateNix = {
-    enable = true;
-    customSettings = {
-      eval-cores = 0;
-      extra-experimental-features = [ "build-time-fetch-tree" ];
-    };
-  };
+  determinateNix.enable = true;
 
   # Set system state version
   system.stateVersion = 5;
