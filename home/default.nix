@@ -14,6 +14,7 @@
     fh # FlakeHub
     nil # Yet another language server for Nix
     nixd # Nix language server
+    nixfmt # Nix code formatter (RFC style)
     nixpkgs-fmt # Nix code formatter for nixpkgs
   ];
 
@@ -41,7 +42,6 @@
     (import ./aerospace)
     (import ./aws)
     (import ./claude)
-    (import ./direnv)
     (import ./fish)
     (import ./ghostty)
     (import ./git)
