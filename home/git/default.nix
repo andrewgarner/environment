@@ -1,4 +1,5 @@
-{profile, ...}: {
+{ profile, ... }:
+{
   programs.git = {
     enable = true;
 
