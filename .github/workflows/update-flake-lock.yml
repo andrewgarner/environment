@@ -1,0 +1,28 @@
+name: Update Nix dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0' # weekly on Sunday at 00:00
+
+jobs:
+  update-flake-inputs:
+    name: Update flake inputs
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install Nix
+        uses: DeterminateSystems/determinate-nix-action@v3
+
+      - name: Update flake.lock
+        uses: DeterminateSystems/update-flake-lock@main
+        with:
+          pr-title: "chore(nix): update flake.lock"
+          pr-labels: |
+            dependencies
+            automated
