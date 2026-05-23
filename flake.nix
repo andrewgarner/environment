@@ -15,27 +15,24 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "https://flakehub.com/f/nix-community/home-manager/0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    {
-      self,
-      determinate,
-      darwin,
-      home-manager,
-      nixpkgs,
-      ...
-    }:
+    { self, ... }@inputs:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ self.overlays.default ];
+      };
 
       darwinConfiguration =
         profile:
-        darwin.lib.darwinSystem {
+        inputs.darwin.lib.darwinSystem {
           inherit system;
 
           specialArgs = {
@@ -44,10 +41,11 @@
           };
 
           modules = [
-            determinate.darwinModules.default
-            ./darwin
+            inputs.determinate.darwinModules.default
+            self.darwinModules.system
+            self.darwinModules.homebrew
 
-            home-manager.darwinModules.home-manager
+            inputs.home-manager.darwinModules.home-manager
             {
               home-manager = {
                 extraSpecialArgs = {
@@ -70,10 +68,23 @@
         };
       };
 
+      darwinModules = {
+        system = import ./darwin/system.nix;
+        homebrew = import ./darwin/homebrew.nix;
+      };
+
+      overlays.default = _final: prev: {
+        lib = prev.lib // {
+          homeDirectory =
+            username: if prev.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
+        };
+      };
+
       devShells.${system}.default = pkgs.mkShellNoCC {
         packages = with pkgs; [
           commitlint-rs
           lefthook
+          self.formatter.${system}
         ];
       };
 
