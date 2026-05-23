@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+
     darwin = {
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,6 +19,7 @@
 
   outputs = {
     self,
+    determinate,
     darwin,
     home-manager,
     nixpkgs,
@@ -35,6 +38,7 @@
         };
 
         modules = [
+          determinate.darwinModules.default
           ./system
           ./homebrew
 

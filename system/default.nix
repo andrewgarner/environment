@@ -4,8 +4,7 @@
   specialArgs,
   ...
 }: {
-  # Disable Nix as we're using Determinate (https://determinate.systems/posts/nix-darwin-updates/
-  nix.enable = false;
+  determinateNix.enable = true;
 
   # Set system state version
   system.stateVersion = 5;
@@ -13,10 +12,8 @@
   # Set system configuration revision
   system.configurationRevision = specialArgs.configurationRevision;
 
-  # Run settings activation script after user activation
-  system.activationScripts.postUserActivation.text = ''
-    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-  '';
+  # Set primary user for user-scoped options
+  system.primaryUser = profile.username;
 
   # Set user configuration (home directory and full name)
   users.users.${profile.username} = {
