@@ -34,6 +34,7 @@
   imports = [
     (import ./aerospace)
     (import ./aws)
+    (import ./claude)
     (import ./direnv)
     (import ./fish)
     (import ./ghostty)

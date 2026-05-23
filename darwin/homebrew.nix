@@ -8,6 +8,7 @@
 
     casks = [
       "aerospace"
+      "claude-code"
       "docker"
       "elgato-camera-hub"
       "elgato-control-center"
