@@ -8,5 +8,12 @@
     "context7@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
+  },
+  "permissions": {
+    "allow": [
+      "Skill(commit-commands:commit)",
+      "Skill(commit-commands:commit-push-pr)",
+      "Skill(commit-commands:clean_gone)"
+    ]
   }
 }
