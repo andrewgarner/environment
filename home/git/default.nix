@@ -158,6 +158,9 @@
       ### Mise ###
       "mise.local.toml"
       "mise.*.local.toml"
+
+      ### Claude ###
+      ".claude/settings.local.json"
     ];
 
     signing = {
