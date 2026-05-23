@@ -18,6 +18,12 @@
   ];
 
   home.sessionVariables = {
+    HOMEBREW_PREFIX = "/opt/homebrew";
+    HOMEBREW_CELLAR = "/opt/homebrew/Cellar";
+    HOMEBREW_REPOSITORY = "/opt/homebrew";
+    HOMEBREW_NO_ANALYTICS = "1";
+    HOMEBREW_NO_ENV_HINTS = "1";
+    DO_NOT_TRACK = "1";
     FLAKE_CHECKER_NO_TELEMETRY = "true";
     PAGER = "less -FirSwX";
   };
