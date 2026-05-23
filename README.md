@@ -21,5 +21,5 @@ nix --version
 Run the following command to apply the configuration:
 
 ```shell
-nix --experimental-features 'nix-command flakes' run nix-darwin -- switch --flake github:andrewgarner/environment
+nix run nix-darwin -- switch --flake "github:andrewgarner/environment?submodules=1#personal"
 ```
