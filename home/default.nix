@@ -18,6 +18,7 @@
   ];
 
   home.sessionVariables = {
+    FLAKE_CHECKER_NO_TELEMETRY = "true";
     PAGER = "less -FirSwX";
   };
 

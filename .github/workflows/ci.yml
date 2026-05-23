@@ -12,7 +12,6 @@ jobs:
     name: Flake
     runs-on: macos-latest
     permissions:
-      id-token: write
       contents: read
     steps:
       - name: Checkout
@@ -23,6 +22,8 @@ jobs:
 
       - name: Check Nix flake lockfile
         uses: DeterminateSystems/flake-checker-action@main
+        env:
+          FLAKE_CHECKER_NO_TELEMETRY: true
 
       - name: Check Nix flake for errors
         run: nix flake check
