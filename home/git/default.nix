@@ -1,8 +1,6 @@
 {profile, ...}: {
   programs.git = {
     enable = true;
-    userName = profile.name;
-    userEmail = profile.email;
 
     attributes = [
       # Automatically normalise line endings for all text-based files
@@ -20,7 +18,12 @@
       "yarn.lock merge=yarn-merge-driver"
     ];
 
-    extraConfig = {
+    settings = {
+      user = {
+        name = profile.name;
+        email = profile.email;
+      };
+
       apply.whitespace = "fix";
 
       branch.autosetuprebase = "always";
