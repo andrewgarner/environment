@@ -55,6 +55,9 @@
   # Disable window animations
   system.defaults.NSGlobalDomain.NSAutomaticWindowAnimationsEnabled = false;
 
+  # Always hide the menu bar
+  system.defaults.NSGlobalDomain._HIHideMenuBar = true;
+
   # Hide menu bar in fullscreen mode
   system.defaults.CustomUserPreferences.NSGlobalDomain.AppleMenuBarVisibleInFullscreen = false;
 
