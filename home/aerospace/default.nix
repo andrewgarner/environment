@@ -1,20 +1,9 @@
 {
-  lib,
-  config,
-  pkgs,
-  ...
-}:
-let
-  toml = pkgs.formats.toml { };
-in
-{
-  options.programs.aerospace.settings = lib.mkOption {
-    type = toml.type;
-    default = { };
-  };
+  programs.aerospace = {
+    enable = true;
+    package = null;
 
-  config = {
-    programs.aerospace.settings = {
+    userSettings = {
       "after-login-command" = [ ];
       "after-startup-command" = [ ];
       "start-at-login" = true;
@@ -193,8 +182,5 @@ in
         }
       ];
     };
-
-    xdg.configFile."aerospace/aerospace.toml".source =
-      toml.generate "aerospace.toml" config.programs.aerospace.settings;
   };
 }
