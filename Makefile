@@ -1,6 +1,6 @@
 .PHONY: check clean develop format update
 
-PROFILE := "personal"
+PROFILE := personal
 
 default: install
 

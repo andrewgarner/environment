@@ -1,12 +1,24 @@
-{ config, ... }:
+{ ... }:
 {
-  xdg.configFile."ghostty/config" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/environment/home/ghostty/config";
+  programs.ghostty = {
+    enable = true;
+    package = null;
+    settings = {
+      theme = "dark:tokyonight,light:tokyonight-day";
+      font-family = "TX-02";
+      font-size = 15;
+      background-blur = true;
+      background-blur-radius = 20;
+      background-opacity = 0.95;
+      unfocused-split-opacity = 0.95;
+      macos-auto-secure-input = true;
+      macos-secure-input-indication = true;
+      macos-titlebar-style = "hidden";
+      mouse-hide-while-typing = true;
+      window-padding-x = 20;
+      window-padding-y = 20;
+      window-padding-balance = true;
+      keybind = [ "global:alt+grave_accent=toggle_quick_terminal" ];
+    };
   };
-
-  programs.fish.shellInit = ''
-    if set -q GHOSTTY_RESOURCES_DIR
-      source "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
-    end
-  '';
 }

@@ -43,17 +43,16 @@
           modules = [
             inputs.determinate.darwinModules.default
             self.darwinModules.system
-            self.darwinModules.homebrew
+            self.darwinModules.brewCommon
+            self.darwinModules.brewPersonal
 
             inputs.home-manager.darwinModules.home-manager
             {
               home-manager = {
-                extraSpecialArgs = {
-                  inherit profile;
-                };
+                extraSpecialArgs = { inherit profile; };
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${profile.username} = import ./home;
+                users.${profile.username} = import ./home/personal.nix;
               };
             }
           ];
@@ -70,7 +69,13 @@
 
       darwinModules = {
         system = import ./darwin/system.nix;
-        homebrew = import ./darwin/homebrew.nix;
+        brewCommon = import ./darwin/homebrew-common.nix;
+        brewPersonal = import ./darwin/homebrew-personal.nix;
+        brewWork = import ./darwin/homebrew-work.nix;
+      };
+
+      homeModules = {
+        default = import ./home;
       };
 
       overlays.default = _final: prev: {
